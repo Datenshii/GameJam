@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-
     public GameObject enemy;
     public int maxEnemies = 15;
 
@@ -26,7 +25,7 @@ public class LevelManager : MonoBehaviour
 
         for (int i = 0; i < 5; i++)
         {
-            Instantiate(enemy, spawnPositions[Random.Range(0, 4)], Quaternion.identity);
+            Instantiate(enemy, spawnPositions[Random.Range(0, 6)], Quaternion.identity);
         }
     }
 
@@ -43,7 +42,7 @@ public class LevelManager : MonoBehaviour
             numEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
             if (numEnemies < maxEnemies)
             {
-                Instantiate(enemy, spawnPositions[Random.Range(0, 4)], Quaternion.identity);
+                Instantiate(enemy, spawnPositions[Random.Range(0, 6)], Quaternion.identity);
             }
             spawnCd = 2f;
         }
