@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCloud : MonoBehaviour {
 
-    private float h = 5f;
+    private float h = 8f;
 
     void Start()
     {
