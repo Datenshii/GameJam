@@ -37,6 +37,11 @@ public class Enemy : MonoBehaviour {
 
     }
 
+    public void SmiteHit()
+    {
+        Destroy(gameObject);
+    }
+
     public void Flip()
     {
         h *= -1;
