@@ -4,16 +4,11 @@ using UnityEngine;
 
 public class PlayerCloud : MonoBehaviour {
 
-    private float h = 8f;
-
-    void Start()
-    {
-
-    }
+    private float h = 6f;
 
     void Update()
     {
-        if (transform.position.x >= 8 || transform.position.x <= -8)
+        if (transform.position.x + Time.deltaTime * h  >= 8 || transform.position.x + Time.deltaTime * h <= -8)
         {
             Flip();
         }
@@ -27,6 +22,4 @@ public class PlayerCloud : MonoBehaviour {
         scale.x *= -1;
         transform.localScale = scale;
     }
-
-
 }

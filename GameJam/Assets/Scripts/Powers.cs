@@ -22,7 +22,6 @@ public class Powers : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && attackCd <= 0)
         {
             Smite();
-
             attackCd = 1f;
         }
     }
@@ -30,6 +29,5 @@ public class Powers : MonoBehaviour
     void Smite()
     {
         Instantiate(Rayolul, SmitePoint.position, SmitePoint.rotation);
-
     }
 }

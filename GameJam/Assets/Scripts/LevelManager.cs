@@ -7,55 +7,53 @@ public class LevelManager : MonoBehaviour
 {
     public GameObject enemy;
     public int maxEnemies = 15;
-    public Text timer;
-    public Text score;
+    public int scorePoints = 0;
     public float gameTime;
 
-    public int scorePoints = 0;
+    public Text timer;
+    public Text score; 
+
     private int numEnemies;
-    private Vector3[] spawnPositions = new Vector3[6];
     private float spawnCd;
+    private Vector3[] spawnPos = new Vector3[6];   
     
 
     void Start()
     {
 
-        spawnPositions[0] = new Vector3(10f, -4f, 0f);
-        spawnPositions[1] = new Vector3(-10f, -4f, 0f);
-        spawnPositions[2] = new Vector3(-0.75f, -3.5f, 0f);
-        spawnPositions[3] = new Vector3(-7.65f, -3.5f, 0f);
-        spawnPositions[4] = new Vector3(-5.5f, -3.5f, 0f);
-        spawnPositions[5] = new Vector3(3.5f, -3.5f, 0f);
+        spawnPos[0] = new Vector3(10f, -4f, 0f);
+        spawnPos[1] = new Vector3(-10f, -4f, 0f);
+        spawnPos[2] = new Vector3(-0.75f, -3.5f, 0f);
+        spawnPos[3] = new Vector3(-7.65f, -3.5f, 0f);
+        spawnPos[4] = new Vector3(-5.5f, -3.5f, 0f);
+        spawnPos[5] = new Vector3(3.5f, -3.5f, 0f);
 
         spawnCd = 2f;
 
         for (int i = 0; i < 5; i++)
         {
-            Instantiate(enemy, spawnPositions[Random.Range(0, 6)], Quaternion.identity);
+            Instantiate(enemy, spawnPos[Random.Range(0, 6)], Quaternion.identity);
         }
 
-
         gameTime = 151f;
-    }
-
-    void Update()
-    {
-
     }
 
     void FixedUpdate()
     {
         gameTime -= Time.deltaTime;
-        timer.text = ("Time: " + (int)gameTime / 60 + ":" + (int)gameTime % 60);
+
+        timer.text = string.Format("Time: {0:00}:{1:00}", (int)gameTime / 60, (int)gameTime % 60);
+
         score.text = ("Score: " + scorePoints);
 
         spawnCd -= Time.deltaTime;
+
         if (spawnCd <= 0f)
         {
             numEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
             if (numEnemies < maxEnemies)
             {
-                Instantiate(enemy, spawnPositions[Random.Range(0, 6)], Quaternion.identity);
+                Instantiate(enemy, spawnPos[Random.Range(0, 6)], Quaternion.identity);
             }
             spawnCd = 2f;
         }

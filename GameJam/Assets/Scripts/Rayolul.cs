@@ -14,7 +14,7 @@ public class Rayolul : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         Enemy enemy = collision.GetComponent<Enemy>();
-
+    
         if (enemy != null)
         {
             enemy.SmiteHit();
