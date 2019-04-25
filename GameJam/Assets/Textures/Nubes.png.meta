@@ -5,6 +5,9 @@ TextureImporter:
     21300000: botones_nubes_Verdaderas_0
     21300002: botones_nubes_Verdaderas_1
     21300004: botones_nubes_Verdaderas_2
+    21300006: Nubes_0
+    21300008: Nubes_1
+    21300010: Nubes_2
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -85,61 +88,61 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: botones_nubes_Verdaderas_0
+      name: Nubes_0
       rect:
         serializedVersion: 2
         x: 219
         y: 733
         width: 367
         height: 188
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 397f3f8ebf624cc43808cbaf48b3eba3
+      spriteID: 37cbd7f7d7b4fee4eb75df8f3b8863f2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: botones_nubes_Verdaderas_1
+      name: Nubes_1
       rect:
         serializedVersion: 2
         x: 267
         y: 446
         width: 367
         height: 188
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b5c0aa5d08373e408d86423eeeef6a6
+      spriteID: e746f7de35db73c44a27a3efc1a2b66b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: botones_nubes_Verdaderas_2
+      name: Nubes_2
       rect:
         serializedVersion: 2
         x: 237
         y: 152
         width: 367
         height: 188
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a500020915b861d45bf67755596d4277
+      spriteID: 362b77c45132fa64299d88ffa5b0b15d
       vertices: []
       indices: 
       edges: []
