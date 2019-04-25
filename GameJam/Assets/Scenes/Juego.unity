@@ -137,7 +137,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 110711013}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.5, y: 0, z: 0}
+  m_LocalPosition: {x: 9.65, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 761189462}
@@ -355,6 +355,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!4 &458768035 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4089153476539688, guid: 849318e0fd5973843a8c610a9a1d7193,
+    type: 2}
+  m_PrefabInternal: {fileID: 1635919961}
 --- !u!1 &521361213
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,7 +478,6 @@ GameObject:
   m_Component:
   - component: {fileID: 761189462}
   - component: {fileID: 761189461}
-  - component: {fileID: 761189463}
   m_Layer: 9
   m_Name: Fondo
   m_TagString: Untagged
@@ -542,22 +546,10 @@ Transform:
   - {fileID: 1019783323}
   - {fileID: 110711015}
   - {fileID: 137103428}
+  - {fileID: 458768035}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &761189463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 761189460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fbc3cab06cba1a4ba0f3f85772fa4ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 1723719701309182, guid: 849318e0fd5973843a8c610a9a1d7193, type: 2}
-  maxEnemies: 15
 --- !u!1 &1019783321
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,7 +574,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1019783321}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.5, y: 0, z: 0}
+  m_LocalPosition: {x: -9.65, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 761189462}
@@ -724,7 +716,6 @@ Transform:
   m_Father: {fileID: 761189462}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1001 &1635919961
 Prefab:
   m_ObjectHideFlags: 0
@@ -911,8 +902,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> e5c93353f6825a081bfdaa072b4794b7f018b258
 --- !u!1 &2022138840
 GameObject:
   m_ObjectHideFlags: 0
