@@ -557,7 +557,7 @@ MonoBehaviour:
   enemy: {fileID: 1723719701309182, guid: 849318e0fd5973843a8c610a9a1d7193, type: 2}
   maxEnemies: 15
   timer: {fileID: 2005712973}
-  score: {fileID: 0}
+  score: {fileID: 1063910602}
   gameTime: 0
 --- !u!1 &1019783321
 GameObject:
@@ -673,7 +673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -891,7 +891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
