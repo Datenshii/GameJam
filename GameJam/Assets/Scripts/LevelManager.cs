@@ -1,15 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
     public GameObject enemy;
     public int maxEnemies = 15;
+    public Text timer;
+    public Text score;
+    public float gameTime;
 
+    private int scorePoints = 0;
     private int numEnemies;
     private Vector3[] spawnPositions = new Vector3[6];
     private float spawnCd;
+    
 
     void Start()
     {
@@ -27,6 +33,9 @@ public class LevelManager : MonoBehaviour
         {
             Instantiate(enemy, spawnPositions[Random.Range(0, 6)], Quaternion.identity);
         }
+
+
+        gameTime = 151f;
     }
 
     void Update()
@@ -36,6 +45,10 @@ public class LevelManager : MonoBehaviour
 
     void FixedUpdate()
     {
+        gameTime -= Time.deltaTime;
+        timer.text = ("Time: " + (int)gameTime / 60 + ":" + (int)gameTime % 60);
+        score.text = ("Score: " + scorePoints);
+
         spawnCd -= Time.deltaTime;
         if (spawnCd <= 0f)
         {

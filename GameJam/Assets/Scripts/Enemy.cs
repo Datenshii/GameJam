@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour {
     public float moveForce = 50f;
     public float maxSpeed = 2f;
     public float h;
+    public LevelManager levelManager;
 
     private float flipCd;
     private Rigidbody2D rb2d;
