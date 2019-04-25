@@ -7,31 +7,25 @@ public class Enemy : MonoBehaviour {
     public float moveForce = 50f;
     public float maxSpeed = 2f;
     public float h;
-    public LevelManager levelManager;
-    public int points;
+    public int pointsValue;
 
     private float flipCd;
     private Rigidbody2D rb2d;
+    private LevelManager levelManager;
 
-	void Start () {
+    void Start () {
         rb2d = GetComponent<Rigidbody2D>();
+        levelManager = FindObjectOfType<LevelManager>();
 
+        pointsValue = 3;
         h = 1f;
+
         flipCd = Random.Range(1f, 5f);
 
         if (Random.Range(0, 2) == 0)
         {
             Flip();
         }
-
-        levelManager = FindObjectOfType<LevelManager>();
-
-        points = 3;
-
-	}
-	
-	void Update () {
-		
 	}
 
     void FixedUpdate() {
@@ -46,7 +40,7 @@ public class Enemy : MonoBehaviour {
 
     public void SmiteHit()
     {
-        levelManager.scorePoints += points;
+        levelManager.scorePoints += pointsValue;
         Destroy(gameObject);
     }
 

@@ -4,18 +4,12 @@ using UnityEngine;
 
 public class Rayolul : MonoBehaviour
 {
-    private float lightningDuration = 0.1f;
+    private float lightningDuration = 0.5f;
 
     void Start()
     {
         Destroy(gameObject, lightningDuration);
     }
-
-    void Update()
-    {
-
-    }
-
 
     void OnTriggerEnter2D(Collider2D collision)
     {
