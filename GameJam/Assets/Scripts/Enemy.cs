@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour {
     public float moveForce = 50f;
     public float maxSpeed = 2f;
     public float h;
+    public LevelManager levelManager;
+    public int points;
 
     private float flipCd;
     private Rigidbody2D rb2d;
@@ -21,6 +23,10 @@ public class Enemy : MonoBehaviour {
         {
             Flip();
         }
+
+        levelManager = FindObjectOfType<LevelManager>();
+
+        points = 3;
 
 	}
 	
@@ -40,6 +46,7 @@ public class Enemy : MonoBehaviour {
 
     public void SmiteHit()
     {
+        levelManager.scorePoints += points;
         Destroy(gameObject);
     }
 
