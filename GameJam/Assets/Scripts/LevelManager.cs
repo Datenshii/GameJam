@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour
     public Text score;
     public float gameTime;
 
-    private int scorePoints = 0;
+    public int scorePoints = 0;
     private int numEnemies;
     private Vector3[] spawnPositions = new Vector3[6];
     private float spawnCd;
