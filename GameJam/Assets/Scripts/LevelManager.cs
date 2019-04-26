@@ -37,7 +37,12 @@ public class LevelManager : MonoBehaviour
             Instantiate(enemy, spawnPos[Random.Range(0, 6)], Quaternion.identity);
         }
 
-        gameTime = 11f;
+        
+    }
+
+    void Awake()
+    {
+        gameTime = 150f;
     }
 
     void FixedUpdate()
