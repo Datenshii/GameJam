@@ -42,16 +42,22 @@ public class Enemy : MonoBehaviour {
     }
 
     public void SmiteHit()
-    {		
-        levelManager.scorePoints += pointsValue;
-        Destroy(gameObject);
+    {
+        if (levelManager != null)
+        {
+            levelManager.scorePoints += pointsValue;
+            Destroy(gameObject);
+        }
 	
     }
 
     public void MeteorHit()
     {
-        levelManager.scorePoints += pointsValue;
-        Destroy(gameObject);
+        if (levelManager != null)
+        {
+            levelManager.scorePoints += pointsValue;
+            Destroy(gameObject);
+        }
     }
 
     public void Flip()

@@ -9,8 +9,8 @@ public class Ometeorlul : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Enemy enemy = collision.GetComponent<Enemy>();
-        Suelo suelo = collision.GetComponent<Suelo>();
-        if (enemy != null || suelo != null)
+
+        if (enemy != null || collision.CompareTag("Ground"))
         {
             Instantiate(omegasplosionlul, transform.position, transform.rotation);
             Destroy(gameObject);
