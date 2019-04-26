@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SplashScreen : MonoBehaviour {
 
-    private AudioSource PistaAudio
+
 
     private void Start()
     {

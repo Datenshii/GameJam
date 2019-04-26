@@ -24,9 +24,9 @@ GameObject:
   - component: {fileID: 114196659723695646}
   - component: {fileID: 50996841124780222}
   - component: {fileID: 61773137276013982}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chica_Personaje_04_0
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,8 +122,9 @@ MonoBehaviour:
   maxSpeed: 2
   h: 0
   pointsValue: 0
-  MeteorDeath: {fileID: 0}
-  SmiteDeath: {fileID: 0}
+  MeteorDeath: {fileID: 1277465697376618, guid: e939b80cdac7718478c58ab60b3b0c6f,
+    type: 2}
+  SmiteDeath: {fileID: 1346259720680902, guid: 4c8cafaa2aaa8c64f85b0dab28964125, type: 2}
 --- !u!212 &212880492503393622
 SpriteRenderer:
   m_ObjectHideFlags: 1
