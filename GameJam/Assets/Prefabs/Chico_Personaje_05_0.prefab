@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 95947142202240114}
   - component: {fileID: 114411598418556434}
   - component: {fileID: 50146758290617808}
-  m_Layer: 0
+  - component: {fileID: 61563769551191770}
+  m_Layer: 8
   m_Name: Chico_Personaje_05_0
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,6 +64,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &61563769551191770
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1548485191718340}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.4}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.5083333, y: 0.8}
+    newSize: {x: 0.5083333, y: 0.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 0.96}
+  m_EdgeRadius: 0
 --- !u!95 &95947142202240114
 Animator:
   serializedVersion: 3
@@ -96,8 +122,9 @@ MonoBehaviour:
   maxSpeed: 2
   h: 0
   pointsValue: 0
-  MeteorDeath: {fileID: 0}
-  SmiteDeath: {fileID: 0}
+  MeteorDeath: {fileID: 1277465697376618, guid: e939b80cdac7718478c58ab60b3b0c6f,
+    type: 2}
+  SmiteDeath: {fileID: 1346259720680902, guid: 4c8cafaa2aaa8c64f85b0dab28964125, type: 2}
 --- !u!212 &212406946971132860
 SpriteRenderer:
   m_ObjectHideFlags: 1
