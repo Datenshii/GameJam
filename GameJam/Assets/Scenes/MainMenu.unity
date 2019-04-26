@@ -804,7 +804,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d1c3eae88d44941aacaad2a8d31a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boton: {fileID: 8300000, guid: 07da0397ddeb7a547ba9a85aa13a63a8, type: 3}
 --- !u!82 &1332250515
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1065,6 +1064,7 @@ GameObject:
   - component: {fileID: 1729772784}
   - component: {fileID: 1729772786}
   - component: {fileID: 1729772785}
+  - component: {fileID: 1729772787}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1123,6 +1123,24 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1729772783}
+--- !u!95 &1729772787
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1729772783}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 687be0cf85c271049b8264240bc3ce1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1807057964
 GameObject:
   m_ObjectHideFlags: 0
