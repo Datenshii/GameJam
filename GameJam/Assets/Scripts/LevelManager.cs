@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
+        PlayerData.Score = 0;
 
         spawnPos[0] = new Vector3(10f, -4f, 0f);
         spawnPos[1] = new Vector3(-10f, -4f, 0f);
@@ -35,7 +37,7 @@ public class LevelManager : MonoBehaviour
             Instantiate(enemy, spawnPos[Random.Range(0, 6)], Quaternion.identity);
         }
 
-        gameTime = 151f;
+        gameTime = 11f;
     }
 
     void FixedUpdate()
@@ -57,5 +59,9 @@ public class LevelManager : MonoBehaviour
             }
             spawnCd = 2f;
         }
+
+        PlayerData.Score = scorePoints;
+
+        if (gameTime <= 0f) SceneManager.LoadScene("End");
     }
 }
