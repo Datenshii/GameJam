@@ -11,14 +11,6 @@ public class SplashScreen : MonoBehaviour
     private bool clicked = false;
     private float cd;
 
-    private AudioSource PistaAudio;
-    public AudioClip Trueno;
-
-
-    private AudioSource PistaAudio;
-    public AudioClip Trueno;
-
-
     private void Start()
     {
         PistaAudio = GetComponent<AudioSource>();

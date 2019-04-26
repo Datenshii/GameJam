@@ -17,6 +17,7 @@ public class LevelManager : MonoBehaviour
 
     private int numEnemies;
     private float spawnCd;
+    private bool fiftySound = true;
     private Vector3[] spawnPos = new Vector3[6];
 
     private AudioSource PistaAudio;
@@ -40,9 +41,6 @@ public class LevelManager : MonoBehaviour
         for (int i = 0; i < 5; i++)
         {
             Instantiate(enemyInv[Random.Range(0, 7)], spawnPos[Random.Range(0, 6)], Quaternion.identity);
-
-            //PistaAudio.clip = Risa;
-            //PistaAudio.Play();
         }
 
 
@@ -70,10 +68,17 @@ public class LevelManager : MonoBehaviour
             {
                 Instantiate(enemyInv[Random.Range(0, 7)], spawnPos[Random.Range(0, 6)], Quaternion.identity);
             }
-            spawnCd = 2f;
-        }
+            spawnCd = 1f;
+        }   
 
         PlayerData.Score = scorePoints;
+
+        if (fiftySound && scorePoints >= 50)
+        {
+            PistaAudio.clip = Risa;
+            PistaAudio.Play();
+            fiftySound = false;
+        }
 
         if (gameTime <= 0f) SceneManager.LoadScene("End");
     }
