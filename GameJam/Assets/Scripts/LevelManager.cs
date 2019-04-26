@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour
     public int maxEnemies = 15;
     public int scorePoints = 0;
     public float gameTime;
-    public GameObject[] enemyInv = new GameObject[5];
+    public GameObject[] enemyInv = new GameObject[7];
 
     public Text timer;
     public Text score; 
@@ -36,7 +36,7 @@ public class LevelManager : MonoBehaviour
 
         for (int i = 0; i < 5; i++)
         {
-            Instantiate(enemyInv[Random.Range(0,5)], spawnPos[Random.Range(0, 6)], Quaternion.identity);
+            Instantiate(enemyInv[Random.Range(0,7)], spawnPos[Random.Range(0, 6)], Quaternion.identity);
         }
 
         
@@ -62,7 +62,7 @@ public class LevelManager : MonoBehaviour
             numEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
             if (numEnemies < maxEnemies)
             {
-                Instantiate(enemyInv[Random.Range(0, 5)], spawnPos[Random.Range(0, 6)], Quaternion.identity);
+                Instantiate(enemyInv[Random.Range(0, 7)], spawnPos[Random.Range(0, 6)], Quaternion.identity);
             }
             spawnCd = 2f;
         }
