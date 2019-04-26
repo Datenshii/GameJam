@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Omegasplosionlul : MonoBehaviour
 {
-    private float explosionDuration = 0.2f;
+    private float explosionDuration = 0.3f;
 
     void Start()
     {

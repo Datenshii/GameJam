@@ -265,6 +265,7 @@ Transform:
   m_LocalScale: {x: 0.7, y: 0.7, z: 0}
   m_Children:
   - {fileID: 543640668}
+  - {fileID: 1021392330}
   m_Father: {fileID: 761189462}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -280,7 +281,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SmitePoint: {fileID: 543640668}
+  MeteorFall: {fileID: 1021392330}
   Rayolul: {fileID: 1602474903004224, guid: 0704163400a337148b369979caad9786, type: 2}
+  Meteorlul: {fileID: 1690883262347318, guid: 1cc613d38c9520b4394426516f433fad, type: 2}
   Rayo: {fileID: 8300000, guid: 5fcd6e498b2998c4db88f7c871d692fd, type: 3}
 --- !u!82 &137103430
 AudioSource:
@@ -973,6 +976,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b317c3bab4c7640449b9bbbb5d3d86dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1021392329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1021392330}
+  m_Layer: 0
+  m_Name: MeteorFall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1021392330
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021392329}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 137103428}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1063910600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,7 +1090,7 @@ GameObject:
   - component: {fileID: 1247622744}
   m_Layer: 9
   m_Name: Suelo
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
