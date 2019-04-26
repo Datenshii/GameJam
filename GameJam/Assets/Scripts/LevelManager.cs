@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
 
-    public int maxEnemies = 15;
+    public int maxEnemies = 6;
     public int scorePoints = 0;
     public float gameTime;
     public GameObject[] enemyInv = new GameObject[7];
@@ -32,7 +32,7 @@ public class LevelManager : MonoBehaviour
         spawnPos[4] = new Vector3(-5.5f, -3.5f, 0f);
         spawnPos[5] = new Vector3(3.5f, -3.5f, 0f);
 
-        spawnCd = 2f;
+        spawnCd = 1f;
 
         for (int i = 0; i < 5; i++)
         {
