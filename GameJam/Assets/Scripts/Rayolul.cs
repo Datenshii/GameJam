@@ -6,8 +6,13 @@ public class Rayolul : MonoBehaviour
 {
     private float lightningDuration = 0.5f;
 
+	private AudioSource PistaAudio;
+	public AudioClip Electrico;
+
     void Start()
     {
+		PistaAudio = GetComponent<AudioSource> ();
+
         Destroy(gameObject, lightningDuration);
     }
 
@@ -18,6 +23,8 @@ public class Rayolul : MonoBehaviour
         if (enemy != null)
         {
             enemy.SmiteHit();
+			PistaAudio.clip = Electrico;
+			PistaAudio.Play ();
         }
     }
 }

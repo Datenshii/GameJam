@@ -13,7 +13,10 @@ public class Enemy : MonoBehaviour {
     private Rigidbody2D rb2d;
     private LevelManager levelManager;
 
+
+
     void Start () {
+
         rb2d = GetComponent<Rigidbody2D>();
         levelManager = FindObjectOfType<LevelManager>();
 
@@ -39,9 +42,10 @@ public class Enemy : MonoBehaviour {
     }
 
     public void SmiteHit()
-    {
+    {		
         levelManager.scorePoints += pointsValue;
         Destroy(gameObject);
+	
     }
 
     public void Flip()

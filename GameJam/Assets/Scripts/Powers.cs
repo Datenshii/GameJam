@@ -9,9 +9,13 @@ public class Powers : MonoBehaviour
     public GameObject Rayolul;
 
     private float attackCd;
+	private AudioSource PistaAudio;
+	public AudioClip Rayo;
 
     void Start()
     {
+
+		PistaAudio = GetComponent<AudioSource> ();
         attackCd = 1f;
     }
 
@@ -23,11 +27,13 @@ public class Powers : MonoBehaviour
         {
             Smite();
             attackCd = 1f;
-        }
+			        }
     }
 
     void Smite()
     {
         Instantiate(Rayolul, SmitePoint.position, SmitePoint.rotation);
+		PistaAudio.clip = Rayo;
+		PistaAudio.Play ();
     }
 }
