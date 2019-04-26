@@ -13,17 +13,20 @@ public class LevelManager : MonoBehaviour
     public GameObject[] enemyInv = new GameObject[7];
 
     public Text timer;
-    public Text score; 
+    public Text score;
 
     private int numEnemies;
     private float spawnCd;
     private Vector3[] spawnPos = new Vector3[6];
-    
-    
+
+    private AudioSource PistaAudio;
+    public AudioClip Risa;
 
     void Start()
     {
         PlayerData.Score = 0;
+
+        PistaAudio = GetComponent<AudioSource>();
 
         spawnPos[0] = new Vector3(10f, -4f, 0f);
         spawnPos[1] = new Vector3(-10f, -4f, 0f);
@@ -36,10 +39,13 @@ public class LevelManager : MonoBehaviour
 
         for (int i = 0; i < 5; i++)
         {
-            Instantiate(enemyInv[Random.Range(0,7)], spawnPos[Random.Range(0, 6)], Quaternion.identity);
+            Instantiate(enemyInv[Random.Range(0, 7)], spawnPos[Random.Range(0, 6)], Quaternion.identity);
+
+            //PistaAudio.clip = Risa;
+            //PistaAudio.Play();
         }
 
-        
+
     }
 
     void Awake()
