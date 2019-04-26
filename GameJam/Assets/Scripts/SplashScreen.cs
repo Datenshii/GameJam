@@ -6,12 +6,17 @@ using UnityEngine.SceneManagement;
 public class SplashScreen : MonoBehaviour {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     public AudioClip Trueno;
 
     private AudioSource PistaAudio;
     private bool clicked = false;
     private float cd;
+=======
+    private AudioSource PistaAudio;
+    public AudioClip Trueno;
+>>>>>>> ad7f88478080ecce122cc89922b47def790743a9
 =======
 
     private AudioSource PistaAudio;
