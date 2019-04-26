@@ -4,7 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SplashScreen : MonoBehaviour {
-	void Update () {
+
+    private AudioSource PistaAudio
+
+    private void Start()
+    {
+        
+    }
+
+    void Update () {
 		if(Input.GetButtonDown("Fire1")) {
             SceneManager.LoadSceneAsync("MainMenu");
         }
