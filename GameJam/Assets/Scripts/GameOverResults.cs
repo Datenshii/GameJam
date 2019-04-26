@@ -6,10 +6,6 @@ using UnityEngine.UI;
 public class GameOverResults : MonoBehaviour {
 
     public Text message;
-
-	void Start () {
-		
-	}
 	
 	void Update () {
         message.text = ("This area is now purged \n Score: " + PlayerData.Score);		

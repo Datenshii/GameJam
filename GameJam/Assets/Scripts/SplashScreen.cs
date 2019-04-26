@@ -11,7 +11,7 @@ public class SplashScreen : MonoBehaviour
     private bool clicked = false;
     private float cd;
 
-    private void Start()
+    void Start()
     {
         PistaAudio = GetComponent<AudioSource>();
         cd = 3f;
@@ -19,14 +19,14 @@ public class SplashScreen : MonoBehaviour
 
     void Update()
     {
-        if (clicked) cd -= Time.deltaTime;
-
         if (Input.GetButtonDown("Fire1"))
         {
             PistaAudio.clip = Trueno;
             PistaAudio.Play();
             clicked = true;
         }
+
+        if (clicked) cd -= Time.deltaTime;
         if (cd <= 0) SceneManager.LoadSceneAsync("MainMenu");
     }
 }

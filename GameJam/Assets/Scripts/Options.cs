@@ -2,14 +2,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-
 public class Options : MonoBehaviour
 {
-    private AudioSource PistaAudio;
     public AudioClip Boton;
+    private AudioSource PistaAudio; 
 
-    private void Start()
+    void Start()
     {
         PistaAudio = GetComponent<AudioSource>();
     }
@@ -17,9 +15,8 @@ public class Options : MonoBehaviour
     public void LoadSceneOnClick(string scene)
     {
         PistaAudio.clip = Boton;
-        PistaAudio.Play ();
+        PistaAudio.Play();
         SceneManager.LoadScene(scene);
-
     }
 
     public void ExitGame()

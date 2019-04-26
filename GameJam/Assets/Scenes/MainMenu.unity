@@ -767,7 +767,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 956278069
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1332250513
@@ -804,6 +804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d1c3eae88d44941aacaad2a8d31a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Boton: {fileID: 8300000, guid: 07da0397ddeb7a547ba9a85aa13a63a8, type: 3}
 --- !u!82 &1332250515
 AudioSource:
   m_ObjectHideFlags: 0

@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 226045755}
   - component: {fileID: 226045754}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -191,14 +191,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 743158490}
-        m_MethodName: ExitGame
-        m_Mode: 1
+        m_MethodName: LoadSceneOnClick
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: Game
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.08235294, g: 0.58431375, b: 0.93725497, a: 1}
+  m_Color: {r: 1, g: 0.053097337, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d1c3eae88d44941aacaad2a8d31a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boton: {fileID: 0}
+  Boton: {fileID: 8300000, guid: 07da0397ddeb7a547ba9a85aa13a63a8, type: 3}
 --- !u!82 &743158491
 AudioSource:
   m_ObjectHideFlags: 0
@@ -524,7 +524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 767038324}
   - component: {fileID: 767038323}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 958812241}
   - component: {fileID: 958812240}
   m_Layer: 0
-  m_Name: end music
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1133,7 +1133,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: QUIT
+  m_Text: MENU
 --- !u!222 &1526280269
 CanvasRenderer:
   m_ObjectHideFlags: 0
