@@ -9,6 +9,9 @@ public class Enemy : MonoBehaviour {
     public float h;
     public int pointsValue;
 
+    public GameObject MeteorDeath;
+    public GameObject SmiteDeath;
+
     private float flipCd;
     private Rigidbody2D rb2d;
     private LevelManager levelManager;
@@ -46,7 +49,9 @@ public class Enemy : MonoBehaviour {
         if (levelManager != null)
         {
             levelManager.scorePoints += pointsValue;
+            Instantiate(SmiteDeath, transform.position, transform.rotation);
             Destroy(gameObject);
+            
         }
 	
     }
@@ -56,8 +61,15 @@ public class Enemy : MonoBehaviour {
         if (levelManager != null)
         {
             levelManager.scorePoints += pointsValue;
+            MeteorDeathAnim();
             Destroy(gameObject);
+            
         }
+    }
+
+    public void MeteorDeathAnim()
+    {
+        Instantiate(MeteorDeath, transform.position, transform.rotation);
     }
 
     public void Flip()

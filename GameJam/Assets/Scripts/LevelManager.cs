@@ -6,17 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public GameObject enemy;
+
     public int maxEnemies = 15;
     public int scorePoints = 0;
     public float gameTime;
+    public GameObject[] enemyInv = new GameObject[5];
 
     public Text timer;
     public Text score; 
 
     private int numEnemies;
     private float spawnCd;
-    private Vector3[] spawnPos = new Vector3[6];   
+    private Vector3[] spawnPos = new Vector3[6];
+    
     
 
     void Start()
@@ -34,7 +36,7 @@ public class LevelManager : MonoBehaviour
 
         for (int i = 0; i < 5; i++)
         {
-            Instantiate(enemy, spawnPos[Random.Range(0, 6)], Quaternion.identity);
+            Instantiate(enemyInv[Random.Range(0,5)], spawnPos[Random.Range(0, 6)], Quaternion.identity);
         }
 
         
@@ -60,7 +62,7 @@ public class LevelManager : MonoBehaviour
             numEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
             if (numEnemies < maxEnemies)
             {
-                Instantiate(enemy, spawnPos[Random.Range(0, 6)], Quaternion.identity);
+                Instantiate(enemyInv[Random.Range(0, 5)], spawnPos[Random.Range(0, 6)], Quaternion.identity);
             }
             spawnCd = 2f;
         }
