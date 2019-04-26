@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 237240505}
   - component: {fileID: 237240504}
   m_Layer: 0
-  m_Name: music
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -694,7 +694,7 @@ GameObject:
   - component: {fileID: 674145363}
   - component: {fileID: 674145362}
   m_Layer: 0
-  m_Name: gritos
+  m_Name: Screams
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

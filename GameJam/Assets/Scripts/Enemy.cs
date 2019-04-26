@@ -48,6 +48,12 @@ public class Enemy : MonoBehaviour {
 	
     }
 
+    public void MeteorHit()
+    {
+        levelManager.scorePoints += pointsValue;
+        Destroy(gameObject);
+    }
+
     public void Flip()
     {
         h *= -1;

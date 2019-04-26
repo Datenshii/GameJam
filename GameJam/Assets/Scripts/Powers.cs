@@ -6,28 +6,47 @@ public class Powers : MonoBehaviour
 {
 
     public Transform SmitePoint;
+    public Transform MeteorFall;
     public GameObject Rayolul;
+    public GameObject Meteorlul;
 
-    private float attackCd;
+    private float smiteCd;
+    private float meteorCd;
+    private LevelManager levelManager;
 	private AudioSource PistaAudio;
 	public AudioClip Rayo;
 
     void Start()
     {
-
+        levelManager = FindObjectOfType<LevelManager>();
 		PistaAudio = GetComponent<AudioSource> ();
-        attackCd = 1f;
+        smiteCd = 0f;
+        meteorCd = 0f;
     }
 
     void Update()
     {
-        attackCd -= Time.deltaTime;
+        smiteCd -= Time.deltaTime;
+        meteorCd -= Time.deltaTime;
 
-        if (Input.GetButtonDown("Fire1") && attackCd <= 0)
+        if (Input.GetButtonDown("Fire1") && smiteCd <= 0)
         {
-            Smite();
-            attackCd = 1f;
-			        }
+            if (meteorCd <= 0 && levelManager.scorePoints >= 50)
+            {
+                Meteor();
+                meteorCd = 8f;
+            }
+            else if (smiteCd <= 0)
+            {
+                Smite();
+                smiteCd = 1f;
+            }
+        }
+    }
+
+    void Meteor()
+    {
+        Instantiate(Meteorlul, MeteorFall.position, MeteorFall.rotation);
     }
 
     void Smite()
