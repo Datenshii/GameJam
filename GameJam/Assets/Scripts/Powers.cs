@@ -15,6 +15,8 @@ public class Powers : MonoBehaviour
     private LevelManager levelManager;
 	private AudioSource PistaAudio;
 	public AudioClip Rayo;
+    public AudioClip Meteorito;
+
 
     void Start()
     {
@@ -47,6 +49,8 @@ public class Powers : MonoBehaviour
     void Meteor()
     {
         Instantiate(Meteorlul, MeteorFall.position, MeteorFall.rotation);
+        PistaAudio.clip = Meteorito;
+        PistaAudio.Play();
     }
 
     void Smite()

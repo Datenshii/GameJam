@@ -286,6 +286,7 @@ MonoBehaviour:
   Rayolul: {fileID: 1602474903004224, guid: 0704163400a337148b369979caad9786, type: 2}
   Meteorlul: {fileID: 1690883262347318, guid: 1cc613d38c9520b4394426516f433fad, type: 2}
   Rayo: {fileID: 8300000, guid: 5fcd6e498b2998c4db88f7c871d692fd, type: 3}
+  Meteorito: {fileID: 8300000, guid: 1f3a82c3fdd16a94c995b1f84ec8e08d, type: 3}
 --- !u!82 &137103430
 AudioSource:
   m_ObjectHideFlags: 0
