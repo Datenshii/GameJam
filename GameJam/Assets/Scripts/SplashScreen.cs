@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SplashScreen : MonoBehaviour {
-
 	void Update () {
 		if(Input.GetButtonDown("Fire1")) {
             SceneManager.LoadSceneAsync("MainMenu");
